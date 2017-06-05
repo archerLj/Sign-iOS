@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Bugly (2.4.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Bugly
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Bugly: b09cd3c7e54048a0e079be88a7a99610f14eab8f
+
+PODFILE CHECKSUM: 86123026aa8582f77b135c6c708b3993e7564c67
+
+COCOAPODS: 1.1.1

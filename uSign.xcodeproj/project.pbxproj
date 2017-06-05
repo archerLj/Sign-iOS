@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		417734D81EE5336F00AF7DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417734D71EE5336F00AF7DA2 /* AppDelegate.swift */; };
+		417734DD1EE5336F00AF7DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417734DB1EE5336F00AF7DA2 /* Main.storyboard */; };
+		417734DF1EE5336F00AF7DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417734DE1EE5336F00AF7DA2 /* Assets.xcassets */; };
+		417734E21EE5336F00AF7DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417734E01EE5336F00AF7DA2 /* LaunchScreen.storyboard */; };
+		417734EC1EE5409600AF7DA2 /* start-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 417734EB1EE5409600AF7DA2 /* start-image.png */; };
+		417734FE1EE541F600AF7DA2 /* loginASign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417734FD1EE541F600AF7DA2 /* loginASign.storyboard */; };
+		417735001EE5424C00AF7DA2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417734FF1EE5424C00AF7DA2 /* LoginViewController.swift */; };
+		417735041EE5453E00AF7DA2 /* StoryboardExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417735031EE5453E00AF7DA2 /* StoryboardExt.swift */; };
+		417735061EE5469E00AF7DA2 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417735051EE5469E00AF7DA2 /* StoryboardIdentifiable.swift */; };
+		417735081EE546C600AF7DA2 /* StoryboardIdentifiableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417735071EE546C600AF7DA2 /* StoryboardIdentifiableExt.swift */; };
+		4177350A1EE5473B00AF7DA2 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417735091EE5473B00AF7DA2 /* UIViewControllerExt.swift */; };
+		DCDE0002497670435D9ADAD0 /* Pods_uSign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFBB7F9A7F61449189666B7 /* Pods_uSign.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		417734D41EE5336F00AF7DA2 /* uSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		417734D71EE5336F00AF7DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		417734DC1EE5336F00AF7DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		417734DE1EE5336F00AF7DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		417734E11EE5336F00AF7DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		417734E31EE5336F00AF7DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417734EB1EE5409600AF7DA2 /* start-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-image.png"; sourceTree = "<group>"; };
+		417734FD1EE541F600AF7DA2 /* loginASign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = loginASign.storyboard; sourceTree = "<group>"; };
+		417734FF1EE5424C00AF7DA2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		417735031EE5453E00AF7DA2 /* StoryboardExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExt.swift; sourceTree = "<group>"; };
+		417735051EE5469E00AF7DA2 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		417735071EE546C600AF7DA2 /* StoryboardIdentifiableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiableExt.swift; sourceTree = "<group>"; };
+		417735091EE5473B00AF7DA2 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		6BF333D3CE5D32FFC0DB645B /* Pods-uSign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSign.release.xcconfig"; path = "Pods/Target Support Files/Pods-uSign/Pods-uSign.release.xcconfig"; sourceTree = "<group>"; };
+		6BFBB7F9A7F61449189666B7 /* Pods_uSign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uSign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFB01356D111393EDF34DFD9 /* Pods-uSign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSign.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uSign/Pods-uSign.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		417734D11EE5336F00AF7DA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDE0002497670435D9ADAD0 /* Pods_uSign.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00F9F1B5AFBF723BF11B4F05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BFBB7F9A7F61449189666B7 /* Pods_uSign.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		417734CB1EE5336F00AF7DA2 = {
+			isa = PBXGroup;
+			children = (
+				417734D61EE5336F00AF7DA2 /* uSign */,
+				417734D51EE5336F00AF7DA2 /* Products */,
+				A54BC22CF565B2EC0EAF8013 /* Pods */,
+				00F9F1B5AFBF723BF11B4F05 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		417734D51EE5336F00AF7DA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				417734D41EE5336F00AF7DA2 /* uSign.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		417734D61EE5336F00AF7DA2 /* uSign */ = {
+			isa = PBXGroup;
+			children = (
+				417735011EE5451D00AF7DA2 /* Extension */,
+				417735021EE5451D00AF7DA2 /* Protocol */,
+				417734ED1EE5417B00AF7DA2 /* History */,
+				417734EE1EE5417B00AF7DA2 /* Login&Sign */,
+				417734EF1EE5417B00AF7DA2 /* Profile */,
+				417734F01EE5417B00AF7DA2 /* RootPage */,
+				417734D71EE5336F00AF7DA2 /* AppDelegate.swift */,
+				417734DB1EE5336F00AF7DA2 /* Main.storyboard */,
+				417734DE1EE5336F00AF7DA2 /* Assets.xcassets */,
+				417734E01EE5336F00AF7DA2 /* LaunchScreen.storyboard */,
+				417734EB1EE5409600AF7DA2 /* start-image.png */,
+				417734E31EE5336F00AF7DA2 /* Info.plist */,
+			);
+			path = uSign;
+			sourceTree = "<group>";
+		};
+		417734ED1EE5417B00AF7DA2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				417734F41EE541AA00AF7DA2 /* controller */,
+				417734F51EE541AA00AF7DA2 /* modal */,
+				417734F61EE541AA00AF7DA2 /* view */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		417734EE1EE5417B00AF7DA2 /* Login&Sign */ = {
+			isa = PBXGroup;
+			children = (
+				417734F11EE541A200AF7DA2 /* controller */,
+				417734F21EE541A200AF7DA2 /* modal */,
+				417734F31EE541A200AF7DA2 /* view */,
+			);
+			path = "Login&Sign";
+			sourceTree = "<group>";
+		};
+		417734EF1EE5417B00AF7DA2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				417734F71EE541B400AF7DA2 /* controller */,
+				417734F81EE541B400AF7DA2 /* modal */,
+				417734F91EE541B400AF7DA2 /* view */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		417734F01EE5417B00AF7DA2 /* RootPage */ = {
+			isa = PBXGroup;
+			children = (
+				417734FA1EE541BC00AF7DA2 /* controller */,
+				417734FB1EE541BC00AF7DA2 /* modal */,
+				417734FC1EE541BC00AF7DA2 /* view */,
+			);
+			path = RootPage;
+			sourceTree = "<group>";
+		};
+		417734F11EE541A200AF7DA2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				417734FF1EE5424C00AF7DA2 /* LoginViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		417734F21EE541A200AF7DA2 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		417734F31EE541A200AF7DA2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				417734FD1EE541F600AF7DA2 /* loginASign.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		417734F41EE541AA00AF7DA2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		417734F51EE541AA00AF7DA2 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		417734F61EE541AA00AF7DA2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		417734F71EE541B400AF7DA2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		417734F81EE541B400AF7DA2 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		417734F91EE541B400AF7DA2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		417734FA1EE541BC00AF7DA2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		417734FB1EE541BC00AF7DA2 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		417734FC1EE541BC00AF7DA2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		417735011EE5451D00AF7DA2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				417735031EE5453E00AF7DA2 /* StoryboardExt.swift */,
+				417735071EE546C600AF7DA2 /* StoryboardIdentifiableExt.swift */,
+				417735091EE5473B00AF7DA2 /* UIViewControllerExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		417735021EE5451D00AF7DA2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				417735051EE5469E00AF7DA2 /* StoryboardIdentifiable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A54BC22CF565B2EC0EAF8013 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFB01356D111393EDF34DFD9 /* Pods-uSign.debug.xcconfig */,
+				6BF333D3CE5D32FFC0DB645B /* Pods-uSign.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		417734D31EE5336F00AF7DA2 /* uSign */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417734E61EE5336F00AF7DA2 /* Build configuration list for PBXNativeTarget "uSign" */;
+			buildPhases = (
+				BDAF2485F515F965B80305AF /* [CP] Check Pods Manifest.lock */,
+				417734D01EE5336F00AF7DA2 /* Sources */,
+				417734D11EE5336F00AF7DA2 /* Frameworks */,
+				417734D21EE5336F00AF7DA2 /* Resources */,
+				5B75730231184B349D951105 /* [CP] Embed Pods Frameworks */,
+				47085177255E71F40ADE9753 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uSign;
+			productName = uSign;
+			productReference = 417734D41EE5336F00AF7DA2 /* uSign.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		417734CC1EE5336F00AF7DA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = com.bocodo.csr;
+				TargetAttributes = {
+					417734D31EE5336F00AF7DA2 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = H766CX4727;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 417734CF1EE5336F00AF7DA2 /* Build configuration list for PBXProject "uSign" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 417734CB1EE5336F00AF7DA2;
+			productRefGroup = 417734D51EE5336F00AF7DA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				417734D31EE5336F00AF7DA2 /* uSign */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		417734D21EE5336F00AF7DA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417734EC1EE5409600AF7DA2 /* start-image.png in Resources */,
+				417734E21EE5336F00AF7DA2 /* LaunchScreen.storyboard in Resources */,
+				417734DF1EE5336F00AF7DA2 /* Assets.xcassets in Resources */,
+				417734FE1EE541F600AF7DA2 /* loginASign.storyboard in Resources */,
+				417734DD1EE5336F00AF7DA2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47085177255E71F40ADE9753 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uSign/Pods-uSign-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B75730231184B349D951105 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uSign/Pods-uSign-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDAF2485F515F965B80305AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		417734D01EE5336F00AF7DA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417735061EE5469E00AF7DA2 /* StoryboardIdentifiable.swift in Sources */,
+				417735041EE5453E00AF7DA2 /* StoryboardExt.swift in Sources */,
+				4177350A1EE5473B00AF7DA2 /* UIViewControllerExt.swift in Sources */,
+				417735001EE5424C00AF7DA2 /* LoginViewController.swift in Sources */,
+				417735081EE546C600AF7DA2 /* StoryboardIdentifiableExt.swift in Sources */,
+				417734D81EE5336F00AF7DA2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		417734DB1EE5336F00AF7DA2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				417734DC1EE5336F00AF7DA2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		417734E01EE5336F00AF7DA2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				417734E11EE5336F00AF7DA2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		417734E41EE5336F00AF7DA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		417734E51EE5336F00AF7DA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		417734E71EE5336F00AF7DA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFB01356D111393EDF34DFD9 /* Pods-uSign.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H766CX4727;
+				INFOPLIST_FILE = uSign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bocodo.csr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		417734E81EE5336F00AF7DA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BF333D3CE5D32FFC0DB645B /* Pods-uSign.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H766CX4727;
+				INFOPLIST_FILE = uSign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bocodo.csr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		417734CF1EE5336F00AF7DA2 /* Build configuration list for PBXProject "uSign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417734E41EE5336F00AF7DA2 /* Debug */,
+				417734E51EE5336F00AF7DA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		417734E61EE5336F00AF7DA2 /* Build configuration list for PBXNativeTarget "uSign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417734E71EE5336F00AF7DA2 /* Debug */,
+				417734E81EE5336F00AF7DA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 417734CC1EE5336F00AF7DA2 /* Project object */;
+}

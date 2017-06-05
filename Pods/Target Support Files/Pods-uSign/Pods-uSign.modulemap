@@ -1,0 +1,6 @@
+framework module Pods_uSign {
+  umbrella header "Pods-uSign-umbrella.h"
+
+  export *
+  module * { export * }
+}
