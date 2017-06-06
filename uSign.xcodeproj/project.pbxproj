@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		417734D81EE5336F00AF7DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417734D71EE5336F00AF7DA2 /* AppDelegate.swift */; };
-		417734DD1EE5336F00AF7DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417734DB1EE5336F00AF7DA2 /* Main.storyboard */; };
 		417734DF1EE5336F00AF7DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417734DE1EE5336F00AF7DA2 /* Assets.xcassets */; };
 		417734E21EE5336F00AF7DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417734E01EE5336F00AF7DA2 /* LaunchScreen.storyboard */; };
 		417734EC1EE5409600AF7DA2 /* start-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 417734EB1EE5409600AF7DA2 /* start-image.png */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		417734D41EE5336F00AF7DA2 /* uSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417734D71EE5336F00AF7DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		417734DC1EE5336F00AF7DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		417734DE1EE5336F00AF7DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417734E11EE5336F00AF7DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		417734E31EE5336F00AF7DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				417734EF1EE5417B00AF7DA2 /* Profile */,
 				417734F01EE5417B00AF7DA2 /* RootPage */,
 				417734D71EE5336F00AF7DA2 /* AppDelegate.swift */,
-				417734DB1EE5336F00AF7DA2 /* Main.storyboard */,
 				417734DE1EE5336F00AF7DA2 /* Assets.xcassets */,
 				417734E01EE5336F00AF7DA2 /* LaunchScreen.storyboard */,
 				417734EB1EE5409600AF7DA2 /* start-image.png */,
@@ -341,7 +338,6 @@
 				417734E21EE5336F00AF7DA2 /* LaunchScreen.storyboard in Resources */,
 				417734DF1EE5336F00AF7DA2 /* Assets.xcassets in Resources */,
 				417734FE1EE541F600AF7DA2 /* loginASign.storyboard in Resources */,
-				417734DD1EE5336F00AF7DA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +412,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		417734DB1EE5336F00AF7DA2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				417734DC1EE5336F00AF7DA2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		417734E01EE5336F00AF7DA2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
