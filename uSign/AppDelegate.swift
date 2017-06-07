@@ -49,12 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 17.0), NSForegroundColorAttributeName: UIColor.white]
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 14.0), NSForegroundColorAttributeName: UIColor.white], for: .normal)
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for: .default)
         
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = UIColor.black;
-        
-        
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "nav_back");
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "nav_back");
         
         UIApplication.shared.statusBarStyle = .lightContent;
         UIApplication.shared.isStatusBarHidden = false;

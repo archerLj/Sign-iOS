@@ -31,6 +31,13 @@ class LFRegisterViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true);
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+    }
+
+    
+
+    
     
     /***********************************************************/
     //MARK: Private -
