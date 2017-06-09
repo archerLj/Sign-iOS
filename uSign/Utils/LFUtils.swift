@@ -15,7 +15,7 @@ class LFUtils {
     
     // 判断是否是电话号码
     class func isPhoneNumber(phoneNumber: String) -> Bool {
-        
+    
         if phoneNumber.characters.count == 0 {
             return false
         }
