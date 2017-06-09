@@ -36,6 +36,16 @@ class LFLoginViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true);
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        
+        if let _ = LFUtils.userInfo {
+            self.accountField.text = LFUtils.userInfo?.phoneNum;
+            self.pswdField.text = LFUtils.userInfo?.pswd;
+            self.loginAction(loginBtn);
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true);
     }
@@ -61,8 +71,9 @@ class LFLoginViewController: UIViewController {
         PKHUD.sharedHUD.contentView = PKHUDProgressView();
         PKHUD.sharedHUD.show();
         
-        Network.login(account: accountField.text!, paswd: pswdField.text!, fn: { user in
+        LFNetwork.login(account: accountField.text!, paswd: pswdField.text!, fn: { user in
             if let _ = user {
+                LFUtils.userInfo = user;
                 PKHUD.sharedHUD.hide() { (res) in
                     HUD.flash(.success);
                 }

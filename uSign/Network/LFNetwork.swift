@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 
-let baseUrl: String = "https://192.168.1.171:8443";
+let baseUrl: String = "https://192.168.0.100:8443";
 //自签名网站地址
-let selfSignedHosts = ["192.168.1.171"]
+let selfSignedHosts = ["192.168.0.100"]
 //定义一个结构体，存储认证相关信息
 struct IdentityAndTrust {
     var identityRef:SecIdentity
@@ -20,33 +20,91 @@ struct IdentityAndTrust {
     var certArray:AnyObject
 }
 
-class Network {
+class LFNetwork {
+    
+    // 注册
+    class func register(name: String, jobNum: String, department: String, phone: String, position: String, paswd: String, fn: @escaping (LFUser?)->()) {
+        
+        let params = [
+            "name": name,
+            "jobNum": jobNum,
+            "department": department,
+            "phoneNum": phone,
+            "position": position,
+            "paswd": paswd
+        ]
+        
+        commonRequest(params: params, url: "/api/addUser", method: .post) { (data) in
+            if let tempData = data {
+                if let objc = LFUser.deserialize(from: String(data: tempData, encoding: .utf8)) {
+                    fn(objc);
+                } else {
+                    fn(nil);
+                }
+            } else {
+                fn(nil)
+            }
+        }
+    }
     
     //登录
     class func login(account: String, paswd: String, fn: @escaping (LFUser?)->()) {
-        
-        trastCer();
-        
+
         let params = [
             "account": account,
             "pswd": paswd
         ];
         
-        Alamofire.request(baseUrl + "/api/login", method: .post, parameters: params, encoding: URLEncoding.default).responseJSON { (res) in
-            switch res.result {
-            case .success:
-                print(res);
-                if let tempData = res.data {
-                    if let objc = LFUser.deserialize(from: String(data: tempData, encoding: .utf8)) {
-                        fn(objc);
-                    } else {
-                        fn(nil);
-                    }
+        commonRequest(params: params, url: "/api/login", method: .post) { (data: Data?) in
+            
+            if let tempData = data {
+                if let objc = LFUser.deserialize(from: String(data: tempData, encoding: .utf8)) {
+                    fn(objc);
                 } else {
                     fn(nil);
                 }
+            } else {
+                fn(nil)
+            }
+        }
+    }
+    
+    //获取部门信息
+    class func getDepartment(fn: @escaping ([LFDepartment?]?) -> ()) {
+        
+        commonRequest(params: [:], url: "/api/getAllDepartment", method: .get) { (data) in
+            
+            if let tempData = data {
+                if let objc = [LFDepartment].deserialize(from: String(data: tempData, encoding: .utf8)) {
+                    fn(objc);
+                } else {
+                    fn(nil);
+                }
+            } else {
+                fn(nil)
+            }
+        }
+    }
+    
+    
+    /***********************************************************/
+    //MARK: 网络请求入口
+    /***********************************************************/
+    class func commonRequest(params: Dictionary<String, Any>, url: String, method: HTTPMethod, completionHandler: @escaping (Data?) -> Void) {
+        
+        trastCer();
+        
+        Alamofire.request(baseUrl + url, method: method, parameters: params, encoding: URLEncoding.default).responseJSON { (res) in
+            
+            switch res.result {
+            case .success:
+                if let tempData = res.data {
+                    completionHandler(tempData);
+                } else {
+                    completionHandler(nil);
+                }
             case .failure:
-                fn(nil);
+                completionHandler(nil);
             }
         };
     }

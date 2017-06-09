@@ -41,7 +41,7 @@ extension UIViewController: StoryboardIdentifiable {
     
     func xl_viewWillAppear(animated: Bool) {
         self.xl_viewWillAppear(animated: animated)
-        print("xl_viewWillAppear in swizzleMethod")
+//        print("xl_viewWillAppear in swizzleMethod")
     }
 }
 
