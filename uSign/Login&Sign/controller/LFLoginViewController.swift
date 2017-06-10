@@ -93,6 +93,10 @@ class LFLoginViewController: UIViewController {
     }
     
     @IBAction func forgetPswdAction(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard.storybord(storybord: .loginASign);
+        let forgetPaswdVC: LFForgetPassworldViewController = storyboard.instantiateViewController();
+        self.navigationController?.pushViewController(forgetPaswdVC, animated: true);
     }
 }
 

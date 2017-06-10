@@ -27,6 +27,7 @@
 		41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A081EEA9689002DFA61 /* LFUtils.swift */; };
 		41FA9A0B1EEAAE7F002DFA61 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A0A1EEAAE7F002DFA61 /* UITextFieldExt.swift */; };
 		41FA9A0D1EEAB91A002DFA61 /* DispatchQueueExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A0C1EEAB91A002DFA61 /* DispatchQueueExt.swift */; };
+		41FA9A0F1EEB8C96002DFA61 /* LFForgetPassworldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A0E1EEB8C96002DFA61 /* LFForgetPassworldViewController.swift */; };
 		DCDE0002497670435D9ADAD0 /* Pods_uSign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFBB7F9A7F61449189666B7 /* Pods_uSign.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		41FA9A081EEA9689002DFA61 /* LFUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFUtils.swift; sourceTree = "<group>"; };
 		41FA9A0A1EEAAE7F002DFA61 /* UITextFieldExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		41FA9A0C1EEAB91A002DFA61 /* DispatchQueueExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueExt.swift; sourceTree = "<group>"; };
+		41FA9A0E1EEB8C96002DFA61 /* LFForgetPassworldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFForgetPassworldViewController.swift; sourceTree = "<group>"; };
 		6BF333D3CE5D32FFC0DB645B /* Pods-uSign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSign.release.xcconfig"; path = "Pods/Target Support Files/Pods-uSign/Pods-uSign.release.xcconfig"; sourceTree = "<group>"; };
 		6BFBB7F9A7F61449189666B7 /* Pods_uSign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uSign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB01356D111393EDF34DFD9 /* Pods-uSign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uSign.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uSign/Pods-uSign.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				417734FF1EE5424C00AF7DA2 /* LFLoginViewController.swift */,
 				417735141EE68EF700AF7DA2 /* LFRegisterViewController.swift */,
+				41FA9A0E1EEB8C96002DFA61 /* LFForgetPassworldViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FA9A0F1EEB8C96002DFA61 /* LFForgetPassworldViewController.swift in Sources */,
 				417735061EE5469E00AF7DA2 /* StoryboardIdentifiable.swift in Sources */,
 				417735041EE5453E00AF7DA2 /* StoryboardExt.swift in Sources */,
 				418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */,
