@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lq7-4h-EFH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Page View Controller-->
+        <scene sceneID="o9f-sh-USB">
+            <objects>
+                <viewController storyboardIdentifier="LFRootPageViewController" id="9Jm-XS-qMA" customClass="LFRootPageViewController" customModule="uSign" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OXW-Bh-m63"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0C-6p-iDF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qCA-B4-Xrp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LOx-LR-OMr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics">
+                        <color key="tintColor" red="0.95294117647058818" green="0.1803921568627451" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                    </simulatedTabBarMetrics>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8i-NP-GQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007.2" y="1430.7346326836582"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="SVe-fx-HFI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lq7-4h-EFH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tab_sign_unselected" selectedImage="tab_sign_selected" id="GMS-he-viP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tsC-fs-REE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Jm-XS-qMA" kind="relationship" relationship="rootViewController" id="XUb-c8-hha"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3L-rp-VLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="1430.7346326836582"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_sign_selected" width="26" height="26"/>
+        <image name="tab_sign_unselected" width="26" height="26"/>
+    </resources>
+</document>

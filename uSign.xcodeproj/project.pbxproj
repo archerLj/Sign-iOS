@@ -22,6 +22,12 @@
 		417735111EE64DC300AF7DA2 /* keystore.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 417735101EE64DAE00AF7DA2 /* keystore.p12 */; };
 		417735131EE681A100AF7DA2 /* LFDepartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417735121EE681A100AF7DA2 /* LFDepartment.swift */; };
 		417735151EE68EF700AF7DA2 /* LFRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417735141EE68EF700AF7DA2 /* LFRegisterViewController.swift */; };
+		418296641EECD84A000546C2 /* LFRootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418296631EECD84A000546C2 /* LFRootPageViewController.swift */; };
+		418296661EECD87D000546C2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418296651EECD87D000546C2 /* Profile.storyboard */; };
+		418296681EECD889000546C2 /* LFProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418296671EECD889000546C2 /* LFProfileViewController.swift */; };
+		4182966A1EECD89E000546C2 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418296691EECD89E000546C2 /* History.storyboard */; };
+		4182966C1EECD8A9000546C2 /* LFHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182966B1EECD8A9000546C2 /* LFHistoryViewController.swift */; };
+		418296721EECE2E0000546C2 /* RootPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418296711EECE2E0000546C2 /* RootPage.storyboard */; };
 		418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */; };
 		418D99E71EE7DF2000801D25 /* LFRegisterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */; };
 		41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A081EEA9689002DFA61 /* LFUtils.swift */; };
@@ -49,6 +55,12 @@
 		417735101EE64DAE00AF7DA2 /* keystore.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = keystore.p12; sourceTree = "<group>"; };
 		417735121EE681A100AF7DA2 /* LFDepartment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFDepartment.swift; sourceTree = "<group>"; };
 		417735141EE68EF700AF7DA2 /* LFRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFRegisterViewController.swift; sourceTree = "<group>"; };
+		418296631EECD84A000546C2 /* LFRootPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFRootPageViewController.swift; sourceTree = "<group>"; };
+		418296651EECD87D000546C2 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		418296671EECD889000546C2 /* LFProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFProfileViewController.swift; sourceTree = "<group>"; };
+		418296691EECD89E000546C2 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		4182966B1EECD8A9000546C2 /* LFHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFHistoryViewController.swift; sourceTree = "<group>"; };
+		418296711EECE2E0000546C2 /* RootPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RootPage.storyboard; sourceTree = "<group>"; };
 		418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFRegisterTableViewCell.swift; sourceTree = "<group>"; };
 		418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFRegisterTableViewCell.xib; sourceTree = "<group>"; };
 		41FA9A081EEA9689002DFA61 /* LFUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFUtils.swift; sourceTree = "<group>"; };
@@ -190,6 +202,7 @@
 		417734F41EE541AA00AF7DA2 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				4182966B1EECD8A9000546C2 /* LFHistoryViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -204,6 +217,7 @@
 		417734F61EE541AA00AF7DA2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				418296691EECD89E000546C2 /* History.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -211,6 +225,7 @@
 		417734F71EE541B400AF7DA2 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				418296671EECD889000546C2 /* LFProfileViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -225,6 +240,7 @@
 		417734F91EE541B400AF7DA2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				418296651EECD87D000546C2 /* Profile.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -232,6 +248,7 @@
 		417734FA1EE541BC00AF7DA2 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				418296631EECD84A000546C2 /* LFRootPageViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -246,6 +263,7 @@
 		417734FC1EE541BC00AF7DA2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				418296711EECE2E0000546C2 /* RootPage.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -370,10 +388,13 @@
 			files = (
 				417735111EE64DC300AF7DA2 /* keystore.p12 in Resources */,
 				417734EC1EE5409600AF7DA2 /* start-image.png in Resources */,
+				418296661EECD87D000546C2 /* Profile.storyboard in Resources */,
 				417734E21EE5336F00AF7DA2 /* LaunchScreen.storyboard in Resources */,
 				417734DF1EE5336F00AF7DA2 /* Assets.xcassets in Resources */,
 				418D99E71EE7DF2000801D25 /* LFRegisterTableViewCell.xib in Resources */,
+				418296721EECE2E0000546C2 /* RootPage.storyboard in Resources */,
 				417734FE1EE541F600AF7DA2 /* loginASign.storyboard in Resources */,
+				4182966A1EECD89E000546C2 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +455,7 @@
 			files = (
 				41FA9A0F1EEB8C96002DFA61 /* LFForgetPassworldViewController.swift in Sources */,
 				417735061EE5469E00AF7DA2 /* StoryboardIdentifiable.swift in Sources */,
+				418296681EECD889000546C2 /* LFProfileViewController.swift in Sources */,
 				417735041EE5453E00AF7DA2 /* StoryboardExt.swift in Sources */,
 				418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */,
 				417735131EE681A100AF7DA2 /* LFDepartment.swift in Sources */,
@@ -443,10 +465,12 @@
 				417735081EE546C600AF7DA2 /* StoryboardIdentifiableExt.swift in Sources */,
 				417735151EE68EF700AF7DA2 /* LFRegisterViewController.swift in Sources */,
 				4177350D1EE63E1000AF7DA2 /* LFNetwork.swift in Sources */,
+				418296641EECD84A000546C2 /* LFRootPageViewController.swift in Sources */,
 				417734D81EE5336F00AF7DA2 /* AppDelegate.swift in Sources */,
 				41FA9A0D1EEAB91A002DFA61 /* DispatchQueueExt.swift in Sources */,
 				41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */,
 				41FA9A0B1EEAAE7F002DFA61 /* UITextFieldExt.swift in Sources */,
+				4182966C1EECD8A9000546C2 /* LFHistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

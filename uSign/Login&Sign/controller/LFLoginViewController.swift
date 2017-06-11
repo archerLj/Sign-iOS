@@ -75,7 +75,11 @@ class LFLoginViewController: UIViewController {
             if let _ = user {
                 LFUtils.userInfo = user;
                 PKHUD.sharedHUD.hide() { (res) in
-                    HUD.flash(.success);
+                    HUD.flash(.success, onView: self.view, delay: 2.0, completion: { (res) in
+                        let storyboard = UIStoryboard.storybord(storybord: .loginASign);
+                        let mainTableVC: UITabBarController = storyboard.instantiateViewController();
+                        UIApplication.shared.keyWindow?.rootViewController = mainTableVC;
+                    })
                 }
             } else {
                 PKHUD.sharedHUD.hide() { (res) in

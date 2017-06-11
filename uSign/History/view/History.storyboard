@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jJ0-r7-DXs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History View Controller-->
+        <scene sceneID="Jq8-Eq-Yp1">
+            <objects>
+                <viewController storyboardIdentifier="LFHistoryViewController" id="OhP-RT-ag8" customClass="LFHistoryViewController" customModule="uSign" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIv-51-GMi"/>
+                        <viewControllerLayoutGuide type="bottom" id="K6C-5d-2Bo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QrB-lm-eIn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yc4-Ci-bus"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics">
+                        <color key="tintColor" red="0.95294117647058818" green="0.1803921568627451" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                    </simulatedTabBarMetrics>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogO-tS-Zkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="1430.7346326836582"/>
+        </scene>
+        <!--历史记录-->
+        <scene sceneID="sjt-XM-Vqp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jJ0-r7-DXs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="历史记录" image="tab_his_unselected" selectedImage="tab_his_selected" id="uVQ-BB-Joy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8hX-EV-hiX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OhP-RT-ag8" kind="relationship" relationship="rootViewController" id="aaH-IM-ImU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ua7-9m-mU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="1430.7346326836582"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_his_selected" width="22" height="26"/>
+        <image name="tab_his_unselected" width="22" height="26"/>
+    </resources>
+</document>
