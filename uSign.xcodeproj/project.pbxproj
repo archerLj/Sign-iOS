@@ -28,6 +28,12 @@
 		4182966A1EECD89E000546C2 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418296691EECD89E000546C2 /* History.storyboard */; };
 		4182966C1EECD8A9000546C2 /* LFHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182966B1EECD8A9000546C2 /* LFHistoryViewController.swift */; };
 		418296721EECE2E0000546C2 /* RootPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418296711EECE2E0000546C2 /* RootPage.storyboard */; };
+		418296781EED15AB000546C2 /* LFSignHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418296771EED15AB000546C2 /* LFSignHeaderView.swift */; };
+		4182967A1EED15B5000546C2 /* LFSignHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418296791EED15B5000546C2 /* LFSignHeaderView.xib */; };
+		4182967C1EED15DE000546C2 /* LFSignFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182967B1EED15DE000546C2 /* LFSignFooterView.swift */; };
+		4182967E1EED15E8000546C2 /* LFSignFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4182967D1EED15E8000546C2 /* LFSignFooterView.xib */; };
+		418296811EED1843000546C2 /* LFSignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182967F1EED1843000546C2 /* LFSignCell.swift */; };
+		418296821EED1843000546C2 /* LFSignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418296801EED1843000546C2 /* LFSignCell.xib */; };
 		418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */; };
 		418D99E71EE7DF2000801D25 /* LFRegisterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */; };
 		41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A081EEA9689002DFA61 /* LFUtils.swift */; };
@@ -61,6 +67,13 @@
 		418296691EECD89E000546C2 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		4182966B1EECD8A9000546C2 /* LFHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFHistoryViewController.swift; sourceTree = "<group>"; };
 		418296711EECE2E0000546C2 /* RootPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RootPage.storyboard; sourceTree = "<group>"; };
+		418296771EED15AB000546C2 /* LFSignHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFSignHeaderView.swift; sourceTree = "<group>"; };
+		418296791EED15B5000546C2 /* LFSignHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFSignHeaderView.xib; sourceTree = "<group>"; };
+		4182967B1EED15DE000546C2 /* LFSignFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFSignFooterView.swift; sourceTree = "<group>"; };
+		4182967D1EED15E8000546C2 /* LFSignFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFSignFooterView.xib; sourceTree = "<group>"; };
+		4182967F1EED1843000546C2 /* LFSignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFSignCell.swift; sourceTree = "<group>"; };
+		418296801EED1843000546C2 /* LFSignCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFSignCell.xib; sourceTree = "<group>"; };
+		418296831EED3A6A000546C2 /* uSign-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uSign-bridge.h"; sourceTree = "<group>"; };
 		418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFRegisterTableViewCell.swift; sourceTree = "<group>"; };
 		418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFRegisterTableViewCell.xib; sourceTree = "<group>"; };
 		41FA9A081EEA9689002DFA61 /* LFUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFUtils.swift; sourceTree = "<group>"; };
@@ -95,6 +108,7 @@
 		417734CB1EE5336F00AF7DA2 = {
 			isa = PBXGroup;
 			children = (
+				418296831EED3A6A000546C2 /* uSign-bridge.h */,
 				417735101EE64DAE00AF7DA2 /* keystore.p12 */,
 				41FA9A071EEA9678002DFA61 /* Utils */,
 				417734D61EE5336F00AF7DA2 /* uSign */,
@@ -264,6 +278,12 @@
 			isa = PBXGroup;
 			children = (
 				418296711EECE2E0000546C2 /* RootPage.storyboard */,
+				418296771EED15AB000546C2 /* LFSignHeaderView.swift */,
+				418296791EED15B5000546C2 /* LFSignHeaderView.xib */,
+				4182967B1EED15DE000546C2 /* LFSignFooterView.swift */,
+				4182967D1EED15E8000546C2 /* LFSignFooterView.xib */,
+				4182967F1EED1843000546C2 /* LFSignCell.swift */,
+				418296801EED1843000546C2 /* LFSignCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -386,6 +406,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4182967E1EED15E8000546C2 /* LFSignFooterView.xib in Resources */,
+				4182967A1EED15B5000546C2 /* LFSignHeaderView.xib in Resources */,
+				418296821EED1843000546C2 /* LFSignCell.xib in Resources */,
 				417735111EE64DC300AF7DA2 /* keystore.p12 in Resources */,
 				417734EC1EE5409600AF7DA2 /* start-image.png in Resources */,
 				418296661EECD87D000546C2 /* Profile.storyboard in Resources */,
@@ -455,6 +478,7 @@
 			files = (
 				41FA9A0F1EEB8C96002DFA61 /* LFForgetPassworldViewController.swift in Sources */,
 				417735061EE5469E00AF7DA2 /* StoryboardIdentifiable.swift in Sources */,
+				4182967C1EED15DE000546C2 /* LFSignFooterView.swift in Sources */,
 				418296681EECD889000546C2 /* LFProfileViewController.swift in Sources */,
 				417735041EE5453E00AF7DA2 /* StoryboardExt.swift in Sources */,
 				418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */,
@@ -466,10 +490,12 @@
 				417735151EE68EF700AF7DA2 /* LFRegisterViewController.swift in Sources */,
 				4177350D1EE63E1000AF7DA2 /* LFNetwork.swift in Sources */,
 				418296641EECD84A000546C2 /* LFRootPageViewController.swift in Sources */,
+				418296811EED1843000546C2 /* LFSignCell.swift in Sources */,
 				417734D81EE5336F00AF7DA2 /* AppDelegate.swift in Sources */,
 				41FA9A0D1EEAB91A002DFA61 /* DispatchQueueExt.swift in Sources */,
 				41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */,
 				41FA9A0B1EEAAE7F002DFA61 /* UITextFieldExt.swift in Sources */,
+				418296781EED15AB000546C2 /* LFSignHeaderView.swift in Sources */,
 				4182966C1EECD8A9000546C2 /* LFHistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,6 +617,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bocodo.csr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "uSign-bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -605,6 +632,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bocodo.csr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "uSign-bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

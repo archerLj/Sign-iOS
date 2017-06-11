@@ -66,4 +66,8 @@ class LFUtils {
     class func getUserPaswd() -> String? {
         return UserDefaults.standard.value(forKey: "password") as? String;
     }
+    
+    class func getGaodeKey() -> String {
+        return "38ac9cbae61b7c0bcae149056d0eedd3";
+    }
 }

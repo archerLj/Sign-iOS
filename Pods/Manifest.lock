@@ -1,21 +1,27 @@
 PODS:
   - Alamofire (4.4.0)
+  - AMapFoundation (1.4.0)
+  - AMapLocation (2.4.0):
+    - AMapFoundation (~> 1.4)
   - Bugly (2.4.8)
   - HandyJSON (1.7.1)
   - PKHUD (4.2.2)
 
 DEPENDENCIES:
   - Alamofire
+  - AMapLocation
   - Bugly
   - HandyJSON (~> 1.7.1)
   - PKHUD (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AMapFoundation: 458974f46a39df8407fd818ab83d2630d494c726
+  AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
   Bugly: da3c02408c14838d498429320545a8e439392978
   HandyJSON: 54b6ce942795f7b2e61b82fe73cf25d9f139d125
   PKHUD: 9a3599e04d57676ec14746c40e423a52fb6588c0
 
-PODFILE CHECKSUM: 266b0a0e6abf62b9e4dab9c2ab1f95c2870f89f8
+PODFILE CHECKSUM: 74b49a271ee487164f87127db22b79ab4512fc14
 
 COCOAPODS: 1.2.1

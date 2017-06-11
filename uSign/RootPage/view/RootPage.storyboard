@@ -20,12 +20,27 @@
                     <view key="view" contentMode="scaleToFill" id="qCA-B4-Xrp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-gK-CmB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zbE-gK-CmB" firstAttribute="leading" secondItem="qCA-B4-Xrp" secondAttribute="leading" id="P9H-pi-f9w"/>
+                            <constraint firstAttribute="trailing" secondItem="zbE-gK-CmB" secondAttribute="trailing" id="Vmp-on-tu2"/>
+                            <constraint firstItem="zbE-gK-CmB" firstAttribute="top" secondItem="OXW-Bh-m63" secondAttribute="bottom" id="kWl-Ie-Svx"/>
+                            <constraint firstItem="a0C-6p-iDF" firstAttribute="top" secondItem="zbE-gK-CmB" secondAttribute="bottom" id="lYM-sg-qGY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LOx-LR-OMr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics">
                         <color key="tintColor" red="0.95294117647058818" green="0.1803921568627451" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                     </simulatedTabBarMetrics>
+                    <connections>
+                        <outlet property="mainTable" destination="zbE-gK-CmB" id="bqd-W5-d5w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8i-NP-GQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
