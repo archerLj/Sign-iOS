@@ -43,6 +43,12 @@ class LFLoginViewController: UIViewController {
             self.accountField.text = LFUtils.userInfo?.phoneNum;
             self.pswdField.text = LFUtils.userInfo?.pswd;
             self.loginAction(loginBtn);
+        } else {
+            if let _ = LFUtils.getUserAccount() {
+                self.accountField.text = LFUtils.getUserAccount();
+                self.pswdField.text = LFUtils.getUserPaswd();
+                self.loginAction(loginBtn);
+            }
         }
     }
     
@@ -74,6 +80,7 @@ class LFLoginViewController: UIViewController {
         LFNetwork.login(account: accountField.text!, paswd: pswdField.text!, fn: { user in
             if let _ = user {
                 LFUtils.userInfo = user;
+                LFUtils.saveUser();
                 PKHUD.sharedHUD.hide() { (res) in
                     HUD.flash(.success, onView: self.view, delay: 2.0, completion: { (res) in
                         let storyboard = UIStoryboard.storybord(storybord: .loginASign);

@@ -9,6 +9,7 @@
 import Foundation
 import PKHUD
 
+
 class LFUtils {
     
     static var userInfo: LFUser?
@@ -43,7 +44,26 @@ class LFUtils {
         }
     }
     
+    // 错误提示框
     class func showErrorHud(withMessage: String, onView: UIView) {
         HUD.flash(HUDContentType.labeledError(title: "错误提示", subtitle: withMessage), onView: onView, delay: 4.0, completion: nil);
+    }
+    
+    class func saveUser() {
+        UserDefaults.standard.setValue(userInfo?.phoneNum, forKey: "account");
+        UserDefaults.standard.setValue(userInfo?.pswd, forKey: "password");
+    }
+    
+    class func removeUser() {
+        UserDefaults.standard.removeObject(forKey: "account");
+        UserDefaults.standard.removeObject(forKey: "password");
+    }
+    
+    class func getUserAccount() -> String? {
+        return UserDefaults.standard.value(forKey: "account") as? String;
+    }
+    
+    class func getUserPaswd() -> String? {
+        return UserDefaults.standard.value(forKey: "password") as? String;
     }
 }
