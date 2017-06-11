@@ -103,11 +103,11 @@ class LFLoginViewController: UIViewController {
 extension LFLoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == accountField {
-            accountLine.backgroundColor = UIColor.red;
+            accountLine.backgroundColor = UIColor.black;
             pswdLine.backgroundColor = UIColor.lightGray;
         } else {
             accountLine.backgroundColor = UIColor.lightGray;
-            pswdLine.backgroundColor = UIColor.red;
+            pswdLine.backgroundColor = UIColor.black;
         }
     }
     

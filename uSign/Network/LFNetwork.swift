@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 
-let baseUrl: String = "https://192.168.0.100:8443";
+let baseUrl: String = "https://192.168.1.171:8443";
 //自签名网站地址
-let selfSignedHosts = ["192.168.0.100"]
+let selfSignedHosts = ["192.168.1.171"]
 //定义一个结构体，存储认证相关信息
 struct IdentityAndTrust {
     var identityRef:SecIdentity
@@ -82,6 +82,28 @@ class LFNetwork {
                 }
             } else {
                 fn(nil)
+            }
+        }
+    }
+    
+    //修改密码
+    class func changePaswd(phoneNum: String, paswd: String, fn:@escaping (Bool)->()) {
+        
+        let params = [
+            "phoneNum": phoneNum,
+            "paswd": paswd
+        ]
+        
+        commonRequest(params: params, url: "/api/changePaswd", method: .post) { (data) in
+            let res = String(data: data!, encoding: .utf8);
+            if let _ = res {
+                if res == "0" {
+                    fn(true);
+                } else {
+                    fn(false);
+                }
+            } else {
+                fn(false);
             }
         }
     }
