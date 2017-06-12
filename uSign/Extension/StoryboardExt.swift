@@ -13,6 +13,9 @@ extension UIStoryboard {
     
     enum Storyboard: String {
         case loginASign
+        case RootPage
+        case Profile
+        case History
     }
     
     class func storybord(storybord: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {

@@ -206,9 +206,9 @@ extension LFRegisterViewController: LFRegisterTableViewCellDelegate {
             }
         } else {
             if LFUtils.isEmptyString(item: textFieldShouldReturn.text) {
-                validArr[index] = true;
-            } else {
                 validArr[index] = false;
+            } else {
+                validArr[index] = true;
             }
         }
         self.mainTable.reloadData();

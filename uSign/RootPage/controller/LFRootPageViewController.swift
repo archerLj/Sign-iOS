@@ -10,21 +10,24 @@ import UIKit
 import PKHUD
 
 
+var slocation: CLLocation?
+var saddress: String?
+
 class LFRootPageViewController: UIViewController {
     
     /***********************************************************/
     //MARK: Variables -
     /***********************************************************/
     @IBOutlet weak var mainTable: UITableView!
-    
-    
     let cellReuseID = "LFSignCellID";
-    var location: CLLocation?
-    var address: String?
-    var todayEvents: [LFEvent] = []
-    let locationManager = AMapLocationManager()
     
+    lazy var todayEvents = {
+        return $0;
+    }(Array<LFEvent>())
     
+    lazy var locationManager = {
+        return $0;
+    } (AMapLocationManager())
     
     lazy var headerView = {
         return Bundle.main.loadNibNamed("LFSignHeaderView", owner: self, options: nil)?.last as! LFSignHeaderView;
@@ -46,7 +49,6 @@ class LFRootPageViewController: UIViewController {
         self.title = "首页";
         self.initSetting();
         self.getTodayEvents();
-        self.getLocation();
     }
 
     
@@ -75,22 +77,26 @@ class LFRootPageViewController: UIViewController {
     
     func getLocation() {
         
+        PKHUD.sharedHUD.contentView = PKHUDProgressView();
+        PKHUD.sharedHUD.show();
+        
         locationManager.requestLocation(withReGeocode: true) { (location: CLLocation?, reGeocode: AMapLocationReGeocode?, error: Error?) in
             
-                if let _ = error {
-                    LFUtils.showErrorHud(withMessage: "定位出错，点击右上角刷新重试", onView: self.view);
-                }
-                
-                if let location = location {
-                    self.location = location;
-                }
-                
-                if let reGeocode = reGeocode {
-                    self.address = reGeocode.formattedAddress;
-                    self.footerView.location.text = self.address;
-                }
+            PKHUD.sharedHUD.hide();
+            
+            if let _ = error {
+                LFUtils.showErrorHud(withMessage: "定位出错，点击右上角刷新重试", onView: self.view);
+            }
+            
+            if let location = location {
+                slocation = location;
+            }
+            
+            if let reGeocode = reGeocode {
+                saddress = reGeocode.formattedAddress;
+                self.footerView.location.text = saddress;
+            }
         }
-
     }
     
     func getTodayEvents() {
@@ -100,7 +106,11 @@ class LFRootPageViewController: UIViewController {
         
         LFNetwork.getTodayEvents { (events) in
             
-            PKHUD.sharedHUD.hide();
+            PKHUD.sharedHUD.hide(true, completion: { (res) in
+                if let _ = slocation {} else {
+                    self.getLocation();
+                }
+            })
             
             self.todayEvents.removeAll();
             
@@ -133,6 +143,7 @@ class LFRootPageViewController: UIViewController {
                         self.footerView.signBtn.setTitle("签退", for: .normal);
                     } else {
                         self.footerView.signBtn.setTitle("签退", for: .normal);
+                        self.footerView.signBtn.isEnabled = false;
                     }
                 }
             }
@@ -145,13 +156,16 @@ extension LFRootPageViewController: LFSignFooterViewDelegate {
     
     // 外出
     func LFSignFooterViewDelegate(view: LFSignFooterView, didClickedOut: UIButton) {
-        
+    
+        let storyboard = UIStoryboard.storybord(storybord: .RootPage)
+        let outVC: LFOutViewController = storyboard.instantiateViewController();
+        self.navigationController?.pushViewController(outVC, animated: true);
     }
     
     // 签到/签退
     func LFSignFooterViewDelegate(view: LFSignFooterView, didClickedSign: UIButton) {
         
-        if let temp = self.location {
+        if let temp = slocation {
             var actionType = 0;
             if self.footerView.signBtn.titleLabel?.text == "签退" {
                 actionType = 1;
@@ -160,7 +174,7 @@ extension LFRootPageViewController: LFSignFooterViewDelegate {
             PKHUD.sharedHUD.contentView = PKHUDProgressView();
             PKHUD.sharedHUD.show();
             
-            LFNetwork.addEvent(actionType: actionType, latitude: temp.coordinate.latitude, longtitude: temp.coordinate.longitude, address: self.address!, comment: "") { (res) in
+            LFNetwork.addEvent(actionType: actionType, latitude: temp.coordinate.latitude, longtitude: temp.coordinate.longitude, address: saddress!, comment: "") { (res) in
                 PKHUD.sharedHUD.hide();
                 self.getTodayEvents();
             }

@@ -35,7 +35,7 @@ class LFSignCell: UITableViewCell {
                 if (event!.remark == "迟到" || event!.remark == "早退" || event!.remark == "额外时间") {
                     eventState.textColor = UIColor.red;
                 } else {
-                    eventState.textColor = UIColor(red: 102.0, green: 102.0, blue: 102.0, alpha: 1.0);
+                    eventState.textColor = UIColor.lightGray;
                 }
             }
         }

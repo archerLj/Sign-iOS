@@ -36,11 +36,11 @@ class LFUtils {
             let whiteSpace = NSCharacterSet.whitespacesAndNewlines;
             let str = temp.trimmingCharacters(in: whiteSpace);
             if str == "" {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         } else {
-            return false
+            return true
         }
     }
     

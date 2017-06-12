@@ -46,6 +46,69 @@
             </objects>
             <point key="canvasLocation" x="1007.2" y="1430.7346326836582"/>
         </scene>
+        <!--Out View Controller-->
+        <scene sceneID="UZW-PG-uzS">
+            <objects>
+                <viewController storyboardIdentifier="LFOutViewController" hidesBottomBarWhenPushed="YES" id="I77-Bh-7kM" customClass="LFOutViewController" customModule="uSign" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xxi-45-CEV"/>
+                        <viewControllerLayoutGuide type="bottom" id="ugJ-IZ-c0T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sr2-St-bMI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHw-Xt-rl7">
+                                <rect key="frame" x="15" y="608" width="345" height="44"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GUO-5q-zAY"/>
+                                </constraints>
+                                <state key="normal" title="提交">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="commitBtnAction:" destination="I77-Bh-7kM" eventType="touchUpInside" id="6MS-tf-50O"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLn-al-sDb">
+                                <rect key="frame" x="315.5" y="295" width="44.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UiQ-K8-Nif">
+                                <rect key="frame" x="15" y="35" width="345" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1Ik-dH-LNZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QHw-Xt-rl7" firstAttribute="leading" secondItem="Sr2-St-bMI" secondAttribute="leading" constant="15" id="Nkb-Vk-O2W"/>
+                            <constraint firstAttribute="trailing" secondItem="wLn-al-sDb" secondAttribute="trailing" constant="15" id="Pmg-1F-Tlu"/>
+                            <constraint firstItem="UiQ-K8-Nif" firstAttribute="top" secondItem="Xxi-45-CEV" secondAttribute="bottom" constant="15" id="UsU-3X-tPY"/>
+                            <constraint firstItem="wLn-al-sDb" firstAttribute="top" secondItem="UiQ-K8-Nif" secondAttribute="bottom" constant="10" id="fhr-Xq-CY5"/>
+                            <constraint firstItem="ugJ-IZ-c0T" firstAttribute="top" secondItem="QHw-Xt-rl7" secondAttribute="bottom" constant="15" id="m0j-u3-gHp"/>
+                            <constraint firstAttribute="trailing" secondItem="UiQ-K8-Nif" secondAttribute="trailing" constant="15" id="t00-Qt-TqT"/>
+                            <constraint firstAttribute="trailing" secondItem="QHw-Xt-rl7" secondAttribute="trailing" constant="15" id="wKp-u4-OoN"/>
+                            <constraint firstItem="UiQ-K8-Nif" firstAttribute="leading" secondItem="Sr2-St-bMI" secondAttribute="leading" constant="15" id="wZJ-P2-e4I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentView" destination="UiQ-K8-Nif" id="3Zo-WZ-3lA"/>
+                        <outlet property="commitBtn" destination="QHw-Xt-rl7" id="q5o-C9-Ri5"/>
+                        <outlet property="number" destination="wLn-al-sDb" id="PK9-Fg-0cx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjQ-ms-YXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747" y="1437"/>
+        </scene>
         <!--首页-->
         <scene sceneID="SVe-fx-HFI">
             <objects>

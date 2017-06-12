@@ -84,7 +84,7 @@ class LFForgetPassworldViewController: UIViewController {
             return;
         }
         
-        if !LFUtils.isEmptyString(item: paswdField.text!) || !LFUtils.isEmptyString(item: paswdAgainField.text!) {
+        if LFUtils.isEmptyString(item: paswdField.text!) || LFUtils.isEmptyString(item: paswdAgainField.text!) {
             LFUtils.showErrorHud(withMessage: "密码不能为空", onView: self.view);
             return;
         }
