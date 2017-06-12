@@ -16,22 +16,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header-bg" translatesAutoresizingMaskIntoConstraints="NO" id="LFN-ES-jcN">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="archer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljl-uq-QdB">
-                    <rect key="frame" x="167" y="144" width="41.5" height="17"/>
+                    <rect key="frame" x="167" y="124" width="41.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="软件部 专业打杂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK3-Cb-0Ji">
-                    <rect key="frame" x="136" y="198" width="104" height="17"/>
+                    <rect key="frame" x="136" y="178" width="104" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co3-S3-MMi">
-                    <rect key="frame" x="176" y="171" width="24" height="17"/>
+                    <rect key="frame" x="176" y="151" width="24" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -41,8 +41,8 @@
             <constraints>
                 <constraint firstItem="kK3-Cb-0Ji" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9f3-JT-ZZ3"/>
                 <constraint firstItem="co3-S3-MMi" firstAttribute="top" secondItem="Ljl-uq-QdB" secondAttribute="bottom" constant="10" id="AQH-cC-lOo"/>
-                <constraint firstAttribute="bottom" secondItem="kK3-Cb-0Ji" secondAttribute="bottom" constant="5" id="DrB-jz-abs"/>
-                <constraint firstAttribute="bottom" secondItem="LFN-ES-jcN" secondAttribute="bottom" id="M0g-0H-oaU"/>
+                <constraint firstAttribute="bottom" secondItem="kK3-Cb-0Ji" secondAttribute="bottom" constant="25" id="DrB-jz-abs"/>
+                <constraint firstAttribute="bottom" secondItem="LFN-ES-jcN" secondAttribute="bottom" constant="20" id="M0g-0H-oaU"/>
                 <constraint firstItem="LFN-ES-jcN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bKn-ki-8Tw"/>
                 <constraint firstItem="co3-S3-MMi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oLy-q8-ez1"/>
                 <constraint firstItem="Ljl-uq-QdB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="r20-U1-k0M"/>

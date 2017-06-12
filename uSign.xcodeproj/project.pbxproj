@@ -34,6 +34,7 @@
 		4182967E1EED15E8000546C2 /* LFSignFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4182967D1EED15E8000546C2 /* LFSignFooterView.xib */; };
 		418296811EED1843000546C2 /* LFSignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182967F1EED1843000546C2 /* LFSignCell.swift */; };
 		418296821EED1843000546C2 /* LFSignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418296801EED1843000546C2 /* LFSignCell.xib */; };
+		418296851EED40C3000546C2 /* LFEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418296841EED40C3000546C2 /* LFEvent.swift */; };
 		418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */; };
 		418D99E71EE7DF2000801D25 /* LFRegisterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */; };
 		41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A081EEA9689002DFA61 /* LFUtils.swift */; };
@@ -74,6 +75,7 @@
 		4182967F1EED1843000546C2 /* LFSignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFSignCell.swift; sourceTree = "<group>"; };
 		418296801EED1843000546C2 /* LFSignCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFSignCell.xib; sourceTree = "<group>"; };
 		418296831EED3A6A000546C2 /* uSign-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uSign-bridge.h"; sourceTree = "<group>"; };
+		418296841EED40C3000546C2 /* LFEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFEvent.swift; sourceTree = "<group>"; };
 		418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFRegisterTableViewCell.swift; sourceTree = "<group>"; };
 		418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFRegisterTableViewCell.xib; sourceTree = "<group>"; };
 		41FA9A081EEA9689002DFA61 /* LFUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFUtils.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		417734FB1EE541BC00AF7DA2 /* modal */ = {
 			isa = PBXGroup;
 			children = (
+				418296841EED40C3000546C2 /* LFEvent.swift */,
 			);
 			path = modal;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				417734D81EE5336F00AF7DA2 /* AppDelegate.swift in Sources */,
 				41FA9A0D1EEAB91A002DFA61 /* DispatchQueueExt.swift in Sources */,
 				41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */,
+				418296851EED40C3000546C2 /* LFEvent.swift in Sources */,
 				41FA9A0B1EEAAE7F002DFA61 /* UITextFieldExt.swift in Sources */,
 				418296781EED15AB000546C2 /* LFSignHeaderView.swift in Sources */,
 				4182966C1EECD8A9000546C2 /* LFHistoryViewController.swift in Sources */,

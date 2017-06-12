@@ -108,6 +108,43 @@ class LFNetwork {
         }
     }
     
+    // 当日Events
+    class func getTodayEvents(fn: @escaping ([LFEvent?]?)->()) {
+        
+        
+        commonRequest(params: ["userid": LFUtils.userInfo?.id ?? ""], url: "/api/getTodayEvents", method: .get) { (data) in
+            
+            if let tempData = data {
+                if let objc = [LFEvent].deserialize(from: String(data: tempData, encoding: .utf8)) {
+                    fn(objc);
+                } else {
+                    fn(nil);
+                }
+            } else {
+                fn(nil)
+            }
+
+        }
+    }
+    
+    // 签到/签退/外出
+    class func addEvent(actionType: Int, latitude: Double, longtitude: Double, address: String, comment: String, fn: @escaping (Bool)->()) {
+        
+        let params = [
+        "userid": (LFUtils.userInfo?.id)!,
+        "actionType": actionType,
+        "latitude": latitude,
+        "longtitude": longtitude,
+        "address": address,
+        "comment": comment
+        ] as [String : Any];
+        
+        commonRequest(params: params, url: "/api/addEvent", method: .post) { (data) in
+            
+            fn(true);
+        }
+    }
+    
     
     /***********************************************************/
     //MARK: 网络请求入口
@@ -117,6 +154,8 @@ class LFNetwork {
         trastCer();
         
         Alamofire.request(baseUrl + url, method: method, parameters: params, encoding: URLEncoding.default).responseJSON { (res) in
+            
+            print(res);
             
             switch res.result {
             case .success:

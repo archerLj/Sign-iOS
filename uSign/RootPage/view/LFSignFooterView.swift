@@ -28,9 +28,11 @@ class LFSignFooterView: UIView {
     
     
     @IBAction func outAction(_ sender: UIButton) {
+        self.delegate?.LFSignFooterViewDelegate(view: self, didClickedOut: sender);
     }
     
     @IBAction func signAction(_ sender: UIButton) {
+        self.delegate?.LFSignFooterViewDelegate(view: self, didClickedSign: sender);
     }
     
 }
