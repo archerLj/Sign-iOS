@@ -14,6 +14,7 @@ class LFSignCell: UITableViewCell {
     @IBOutlet weak var eventType: UILabel!
     @IBOutlet weak var eventTime: UILabel!
     @IBOutlet weak var eventState: UILabel!
+    @IBOutlet weak var arrowImageView: UIImageView!
     
     var event: LFEvent? {
         didSet {

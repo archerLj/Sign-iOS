@@ -62,8 +62,9 @@ class LFRootPageViewController: UIViewController {
         self.mainTable.tableFooterView = self.footerView;
         self.mainTable.delegate = self;
         self.mainTable.dataSource = self;
+        self.mainTable.separatorStyle = .none;
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "刷新", style: .plain, target: self, action: #selector(self.getLocation));
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "reLoaction"), style: .plain, target: self, action: #selector(self.getLocation))
         
         AMapServices.shared().apiKey = LFUtils.getGaodeKey();
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -193,6 +194,7 @@ extension LFRootPageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseID) as! LFSignCell;
         cell.event = self.todayEvents[indexPath.row];
+        cell.arrowImageView.isHidden = true;
         return cell;
     }
     

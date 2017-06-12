@@ -123,7 +123,6 @@ class LFNetwork {
             } else {
                 fn(nil)
             }
-
         }
     }
     
@@ -142,6 +141,23 @@ class LFNetwork {
         commonRequest(params: params, url: "/api/addEvent", method: .post) { (data) in
             
             fn(true);
+        }
+    }
+    
+    // 历史记录
+    class func getHistoryEvents(fn: @escaping ([LFEvent?]?) -> ()) {
+        
+        commonRequest(params: ["userid": (LFUtils.userInfo?.id)!], url: "/api/getAllEvents", method: .get) { (data) in
+            
+            if let tempData = data {
+                if let objc = [LFEvent].deserialize(from: String(data: tempData, encoding: .utf8)) {
+                    fn(objc);
+                } else {
+                    fn(nil);
+                }
+            } else {
+                fn(nil)
+            }
         }
     }
     

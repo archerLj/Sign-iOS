@@ -14,6 +14,7 @@ class LFEvent: HandyJSON {
     var actionType: Int?/* 0: 签到 1:签退 2:外出*/
     var updateTime: String?
     var remark: String?
+    var comment: String?
     
     required init() {}
 }
