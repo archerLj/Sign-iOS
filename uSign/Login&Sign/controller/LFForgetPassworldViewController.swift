@@ -18,6 +18,8 @@ class LFForgetPassworldViewController: UIViewController {
     @IBOutlet weak var paswdField: UITextField!
     @IBOutlet weak var paswdAgainField: UITextField!
     @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var codeField: UITextField!
+    @IBOutlet weak var getCodeBtn: UIButton!
     
     
     
@@ -75,6 +77,31 @@ class LFForgetPassworldViewController: UIViewController {
         paswdAgainField.returnKeyType = .done;
         paswdAgainField.delegate = self;
         paswdField.delegate = self;
+        
+        self.getCodeBtn.layer.cornerRadius = 5.0;
+        self.getCodeBtn.layer.borderColor = UIColor.black.cgColor;
+        self.getCodeBtn.layer.borderWidth = 1;
+    }
+    
+    @IBAction func getCodeAction(_ sender: UIButton) {
+        
+        PKHUD.sharedHUD.contentView = PKHUDProgressView();
+        PKHUD.sharedHUD.show();
+        
+        if let _ = self.phoneNumField.text {
+            SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: self.phoneNumField.text!, zone: "86", customIdentifier: nil) { (error) in
+                
+                PKHUD.sharedHUD.hide(true, completion: { (res) in
+                    if let _ = error {
+                        LFUtils.showErrorHud(withMessage: "发送失败", onView: self.view);
+                    } else {
+                        HUD.flash(.success, delay: 2.0);
+                    }
+                })
+            }
+        } else {
+            LFUtils.showErrorHud(withMessage: "电话号码不正确", onView: self.view);
+        }
     }
     
     @IBAction func submitAction(_ sender: UIButton) {
@@ -94,20 +121,34 @@ class LFForgetPassworldViewController: UIViewController {
             return;
         }
         
+        if LFUtils.isEmptyString(item: codeField.text) {
+            LFUtils.showErrorHud(withMessage: "验证码不能为空", onView: self.view);
+            return;
+        }
+        
         PKHUD.sharedHUD.contentView = PKHUDProgressView();
         PKHUD.sharedHUD.show();
         
-        LFNetwork.changePaswd(phoneNum: phoneNumField.text!, paswd: paswdField.text!) { (res) in
+        SMSSDK.commitVerificationCode(self.codeField.text, phoneNumber: self.phoneNumField.text, zone: "86") { (userInfo, error) in
             
-            if res {
-                PKHUD.sharedHUD.hide() { (res) in
-                    HUD.flash(.success, onView: self.view, delay: 2.0, completion: { (res) in
-                        self.navigationController?.popViewController(animated: true);
-                    })
-                }
+            if let _ = error {
+                PKHUD.sharedHUD.hide(true, completion: { (res) in
+                    LFUtils.showErrorHud(withMessage: "验证码错误", onView: self.view);
+                })
             } else {
-                PKHUD.sharedHUD.hide() { (res) in
-                    LFUtils.showErrorHud(withMessage: "修改失败，请重试", onView: self.view)
+                LFNetwork.changePaswd(phoneNum: self.phoneNumField.text!, paswd: self.paswdField.text!) { (res) in
+                    
+                    if res {
+                        PKHUD.sharedHUD.hide() { (res) in
+                            HUD.flash(.success, onView: self.view, delay: 2.0, completion: { (res) in
+                                self.navigationController?.popViewController(animated: true);
+                            })
+                        }
+                    } else {
+                        PKHUD.sharedHUD.hide() { (res) in
+                            LFUtils.showErrorHud(withMessage: "修改失败，请重试", onView: self.view)
+                        }
+                    }
                 }
             }
         }

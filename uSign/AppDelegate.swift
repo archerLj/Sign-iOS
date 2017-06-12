@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /***********************************************************/
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // mob:短信验证
+        SMSSDK.registerApp(LFUtils.getSMS_SDKAppKey(), withSecret: LFUtils.getSMS_SDKAppSecret());
+        
         self.setNavigationAppear();
         
         let storyBoard = UIStoryboard.storybord(storybord: .loginASign);

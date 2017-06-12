@@ -11,7 +11,7 @@
 
 //在桥接文件中引入头文件
 #import <AMapFoundationKit/AMapFoundationKit.h>
-
 #import <AMapLocationKit/AMapLocationKit.h>
+#import <SMS_SDK/SMSSDK.h>
 
 #endif /* uSign_bridge_h */

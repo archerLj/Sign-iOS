@@ -70,4 +70,12 @@ class LFUtils {
     class func getGaodeKey() -> String {
         return "38ac9cbae61b7c0bcae149056d0eedd3";
     }
+    
+    class func getSMS_SDKAppKey() -> String {
+        return "1e9eeb2831296";
+    }
+    
+    class func getSMS_SDKAppSecret() -> String {
+        return "be5407c89ce7fd44f11d62b3288674d2";
+    }
 }

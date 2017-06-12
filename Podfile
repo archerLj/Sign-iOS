@@ -7,4 +7,6 @@ target ‘uSign’ do
     pod 'PKHUD', '~> 4.0'
     pod 'HandyJSON', '~> 1.7.1'
     pod 'AMapLocation'
+    pod 'MOBFoundation_IDFA'
+    pod 'SMSSDK'
 end
