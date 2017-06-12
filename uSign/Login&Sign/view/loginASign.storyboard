@@ -111,7 +111,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PsL-Lc-2jP" firstAttribute="leading" secondItem="kqZ-0p-NB0" secondAttribute="leading" constant="35" id="01q-d9-17Z"/>
                             <constraint firstItem="zB2-K9-pcw" firstAttribute="centerX" secondItem="kqZ-0p-NB0" secondAttribute="centerX" id="2m6-B7-4ex"/>
