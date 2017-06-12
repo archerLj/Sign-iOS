@@ -72,7 +72,7 @@
                                     <action selector="forgetPswdAction:" destination="Moo-Nd-yi2" eventType="touchUpInside" id="RQb-uS-Bte"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uSign" translatesAutoresizingMaskIntoConstraints="NO" id="mHY-9c-mzM">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_transparent" translatesAutoresizingMaskIntoConstraints="NO" id="mHY-9c-mzM">
                                 <rect key="frame" x="116" y="70" width="143" height="108"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="lGW-as-2hi"/>
@@ -392,6 +392,5 @@
     <resources>
         <image name="change-paswd" width="337" height="75"/>
         <image name="icon_transparent" width="44" height="42"/>
-        <image name="uSign" width="143" height="54"/>
     </resources>
 </document>

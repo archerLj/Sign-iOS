@@ -21,16 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="4bF-zr-Dfr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_transparent" translatesAutoresizingMaskIntoConstraints="NO" id="RxO-hT-Mkl">
+                                <rect key="frame" x="162.5" y="308" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WUW-Il-icF"/>
+                                    <constraint firstAttribute="width" constant="50" id="za2-4x-1An"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4bF-zr-Dfr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8Fe-Iu-68V"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="4bF-zr-Dfr" secondAttribute="bottom" id="PhV-ME-hE9"/>
-                            <constraint firstItem="4bF-zr-Dfr" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="ZKa-cg-JTC"/>
-                            <constraint firstAttribute="trailing" secondItem="4bF-zr-Dfr" secondAttribute="trailing" id="rre-ua-vEv"/>
+                            <constraint firstItem="RxO-hT-Mkl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="53L-Sg-g79"/>
+                            <constraint firstItem="RxO-hT-Mkl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UU1-kG-8g1"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -41,6 +43,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="start-image.png" width="320" height="480"/>
+        <image name="icon_transparent" width="44" height="42"/>
     </resources>
 </document>
