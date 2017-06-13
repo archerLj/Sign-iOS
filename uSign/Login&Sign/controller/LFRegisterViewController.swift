@@ -108,7 +108,7 @@ class LFRegisterViewController: UIViewController {
         PKHUD.sharedHUD.contentView = PKHUDProgressView();
         PKHUD.sharedHUD.show();
         
-        LFNetwork.getDepartment { (departments) in
+        LFNetwork.shared.getDepartment { (departments) in
             self.departments = departments;
             PKHUD.sharedHUD.hide();
         }
@@ -131,7 +131,7 @@ class LFRegisterViewController: UIViewController {
                 
                 PKHUD.sharedHUD.contentView = PKHUDProgressView();
                 PKHUD.sharedHUD.show();
-                LFNetwork.register(name: userInfos[0], jobNum: userInfos[1], department: userInfos[2], phone: userInfos[3], position: userInfos[4], paswd: userInfos[5],fn: { (user: LFUser?) in
+                LFNetwork.shared.register(name: userInfos[0], jobNum: userInfos[1], department: userInfos[2], phone: userInfos[3], position: userInfos[4], paswd: userInfos[5],fn: { (user: LFUser?) in
                     if let _ = user {
                         LFUtils.userInfo = user;
                         PKHUD.sharedHUD.hide() { (res) in

@@ -136,7 +136,7 @@ class LFForgetPassworldViewController: UIViewController {
                     LFUtils.showErrorHud(withMessage: "验证码错误", onView: self.view);
                 })
             } else {
-                LFNetwork.changePaswd(phoneNum: self.phoneNumField.text!, paswd: self.paswdField.text!) { (res) in
+                LFNetwork.shared.changePaswd(phoneNum: self.phoneNumField.text!, paswd: self.paswdField.text!) { (res) in
                     
                     if res {
                         PKHUD.sharedHUD.hide() { (res) in

@@ -105,7 +105,7 @@ class LFRootPageViewController: UIViewController {
         PKHUD.sharedHUD.contentView = PKHUDProgressView();
         PKHUD.sharedHUD.show();
         
-        LFNetwork.getTodayEvents { (events) in
+        LFNetwork.shared.getTodayEvents { (events) in
             
             PKHUD.sharedHUD.hide(true, completion: { (res) in
                 if let _ = slocation {} else {
@@ -175,7 +175,7 @@ extension LFRootPageViewController: LFSignFooterViewDelegate {
             PKHUD.sharedHUD.contentView = PKHUDProgressView();
             PKHUD.sharedHUD.show();
             
-            LFNetwork.addEvent(actionType: actionType, latitude: temp.coordinate.latitude, longtitude: temp.coordinate.longitude, address: saddress!, comment: "") { (res) in
+            LFNetwork.shared.addEvent(actionType: actionType, latitude: temp.coordinate.latitude, longtitude: temp.coordinate.longitude, address: saddress!, comment: "") { (res) in
                 PKHUD.sharedHUD.hide();
                 self.getTodayEvents();
             }
@@ -195,6 +195,7 @@ extension LFRootPageViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseID) as! LFSignCell;
         cell.event = self.todayEvents[indexPath.row];
         cell.arrowImageView.isHidden = true;
+        cell.selectionStyle = .none;
         return cell;
     }
     

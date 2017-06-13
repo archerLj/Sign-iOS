@@ -46,7 +46,7 @@ class LFOutViewController: UIViewController {
             PKHUD.sharedHUD.contentView = PKHUDProgressView();
             PKHUD.sharedHUD.show();
             
-            LFNetwork.addEvent(actionType: 2, latitude: temp.coordinate.latitude, longtitude: temp.coordinate.longitude, address: saddress!, comment: self.commentView.text) { (res) in
+            LFNetwork.shared.addEvent(actionType: 2, latitude: temp.coordinate.latitude, longtitude: temp.coordinate.longitude, address: saddress!, comment: self.commentView.text) { (res) in
                 PKHUD.sharedHUD.hide();
                 
                 let rootPageVC = self.navigationController?.viewControllers .first as! LFRootPageViewController;

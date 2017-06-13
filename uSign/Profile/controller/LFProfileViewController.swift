@@ -110,7 +110,7 @@ extension LFProfileViewController: LFProfileHeaderViewDelegate {
     
     func LFProfileHeaderView(view: LFProfileHeaderView, btnAction: UIButton) {
         
-        let actionSheetVC = UIAlertController(title: "", message: "", preferredStyle: .actionSheet);
+        let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet);
         
         let action1 = UIAlertAction(title: "从相册选择", style: .default) { (action) in
             

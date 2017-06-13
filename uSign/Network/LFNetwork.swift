@@ -11,10 +11,8 @@ import Alamofire
 
 
 let baseUrl: String = "https://192.168.1.171:8443";
-//自签名网站地址
-let selfSignedHosts = ["192.168.1.171"]
-//定义一个结构体，存储认证相关信息
-struct IdentityAndTrust {
+let selfSignedHosts = ["192.168.1.171"] //自签名网站地址
+struct IdentityAndTrust { //定义一个结构体，存储认证相关信息
     var identityRef:SecIdentity
     var trust:SecTrust
     var certArray:AnyObject
@@ -22,17 +20,14 @@ struct IdentityAndTrust {
 
 class LFNetwork {
     
+    static let shared = LFNetwork();
+    private init() {
+    }
+    
     // 注册
-    class func register(name: String, jobNum: String, department: String, phone: String, position: String, paswd: String, fn: @escaping (LFUser?)->()) {
+    func register(name: String, jobNum: String, department: String, phone: String, position: String, paswd: String, fn: @escaping (LFUser?)->()) {
         
-        let params = [
-            "name": name,
-            "jobNum": jobNum,
-            "department": department,
-            "phoneNum": phone,
-            "position": position,
-            "paswd": paswd
-        ]
+        let params = "name=\(name)&jobNum=\(jobNum)&department=\(department)&phoneNum=\(phone)&position=\(position)&paswd=\(paswd)";
         
         commonRequest(params: params, url: "/api/addUser", method: .post) { (data) in
             if let tempData = data {
@@ -48,12 +43,9 @@ class LFNetwork {
     }
     
     //登录
-    class func login(account: String, paswd: String, fn: @escaping (LFUser?)->()) {
+    func login(account: String, paswd: String, fn: @escaping (LFUser?)->()) {
 
-        let params = [
-            "account": account,
-            "pswd": paswd
-        ];
+        let params = "account=\(account)&pswd=\(paswd)";
         
         commonRequest(params: params, url: "/api/login", method: .post) { (data: Data?) in
             
@@ -70,9 +62,9 @@ class LFNetwork {
     }
     
     //获取部门信息
-    class func getDepartment(fn: @escaping ([LFDepartment?]?) -> ()) {
+    func getDepartment(fn: @escaping ([LFDepartment?]?) -> ()) {
         
-        commonRequest(params: [:], url: "/api/getAllDepartment", method: .get) { (data) in
+        commonRequest(params: "", url: "/api/getAllDepartment", method: .get) { (data) in
             
             if let tempData = data {
                 if let objc = [LFDepartment].deserialize(from: String(data: tempData, encoding: .utf8)) {
@@ -87,12 +79,9 @@ class LFNetwork {
     }
     
     //修改密码
-    class func changePaswd(phoneNum: String, paswd: String, fn:@escaping (Bool)->()) {
+    func changePaswd(phoneNum: String, paswd: String, fn:@escaping (Bool)->()) {
         
-        let params = [
-            "phoneNum": phoneNum,
-            "paswd": paswd
-        ]
+        let params = "phoneNum=\(phoneNum)&paswd=\(paswd)"
         
         commonRequest(params: params, url: "/api/changePaswd", method: .post) { (data) in
             let res = String(data: data!, encoding: .utf8);
@@ -109,10 +98,9 @@ class LFNetwork {
     }
     
     // 当日Events
-    class func getTodayEvents(fn: @escaping ([LFEvent?]?)->()) {
+    func getTodayEvents(fn: @escaping ([LFEvent?]?)->()) {
         
-        
-        commonRequest(params: ["userid": LFUtils.userInfo?.id ?? ""], url: "/api/getTodayEvents", method: .get) { (data) in
+        commonRequest(params: "userid=\((LFUtils.userInfo?.id)!)", url: "/api/getTodayEvents", method: .get) { (data) in
             
             if let tempData = data {
                 if let objc = [LFEvent].deserialize(from: String(data: tempData, encoding: .utf8)) {
@@ -127,16 +115,9 @@ class LFNetwork {
     }
     
     // 签到/签退/外出
-    class func addEvent(actionType: Int, latitude: Double, longtitude: Double, address: String, comment: String, fn: @escaping (Bool)->()) {
+    func addEvent(actionType: Int, latitude: Double, longtitude: Double, address: String, comment: String, fn: @escaping (Bool)->()) {
         
-        let params = [
-        "userid": (LFUtils.userInfo?.id)!,
-        "actionType": actionType,
-        "latitude": latitude,
-        "longtitude": longtitude,
-        "address": address,
-        "comment": comment
-        ] as [String : Any];
+        let params = "userid=\((LFUtils.userInfo?.id)!)&actionType=\(actionType)&latitude=\(latitude)&longtitude=\(longtitude)&address=\(address)&comment=\(comment)";
         
         commonRequest(params: params, url: "/api/addEvent", method: .post) { (data) in
             
@@ -145,9 +126,9 @@ class LFNetwork {
     }
     
     // 历史记录
-    class func getHistoryEvents(fn: @escaping ([LFEvent?]?) -> ()) {
+    func getHistoryEvents(fn: @escaping ([LFEvent?]?) -> ()) {
         
-        commonRequest(params: ["userid": (LFUtils.userInfo?.id)!], url: "/api/getAllEvents", method: .get) { (data) in
+        commonRequest(params: "userid=\((LFUtils.userInfo?.id)!)", url: "/api/getAllEvents", method: .get) { (data) in
             
             if let tempData = data {
                 if let objc = [LFEvent].deserialize(from: String(data: tempData, encoding: .utf8)) {
@@ -165,12 +146,31 @@ class LFNetwork {
     /***********************************************************/
     //MARK: 网络请求入口
     /***********************************************************/
-    class func commonRequest(params: Dictionary<String, Any>, url: String, method: HTTPMethod, completionHandler: @escaping (Data?) -> Void) {
+    func commonRequest(params: String, url: String, method: HTTPMethod, completionHandler: @escaping (Data?) -> Void) {
         
         trastCer();
         
-        Alamofire.request(baseUrl + url, method: method, parameters: params, encoding: URLEncoding.default).responseJSON { (res) in
-            
+        var tempUrl = url;
+        switch method {
+        case .get:
+            tempUrl = tempUrl + "?" + params;
+            break;
+        default:
+            break;
+        }
+        
+        var request = URLRequest(url: URL(string: baseUrl + tempUrl)!);
+        request.httpMethod = method.rawValue;
+        request.timeoutInterval = 10;
+        
+        if method == .post {
+            request.httpBody = params.data(using: .utf8);
+        }
+        
+        
+        Alamofire.request(request).responseJSON { (res) in
+
+            print(res);
             switch res.result {
             case .success:
                 if let tempData = res.data {
@@ -181,7 +181,7 @@ class LFNetwork {
             case .failure:
                 completionHandler(nil);
             }
-        };
+        }
     }
     
     
@@ -189,7 +189,7 @@ class LFNetwork {
     /***********************************************************/
     //MARK: 服务器证书认证
     /***********************************************************/
-    class func trastCer() -> Void {
+    func trastCer() -> Void {
         //认证相关设置
         let manager = SessionManager.default
         manager.delegate.sessionDidReceiveChallenge = { session, challenge in
@@ -206,7 +206,7 @@ class LFNetwork {
                 == NSURLAuthenticationMethodClientCertificate {
                 print("客户端证书认证！")
                 //获取客户端证书相关信息
-                let identityAndTrust:IdentityAndTrust = extractIdentity();
+                let identityAndTrust:IdentityAndTrust = self.extractIdentity();
                 
                 let urlCredential:URLCredential = URLCredential(
                     identity: identityAndTrust.identityRef,
@@ -224,7 +224,7 @@ class LFNetwork {
     
     
     //获取客户端证书相关信息
-    class func extractIdentity() -> IdentityAndTrust {
+    func extractIdentity() -> IdentityAndTrust {
         var identityAndTrust:IdentityAndTrust!
         var securityError:OSStatus = errSecSuccess
         

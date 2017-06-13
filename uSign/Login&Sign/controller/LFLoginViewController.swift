@@ -77,19 +77,18 @@ class LFLoginViewController: UIViewController {
         PKHUD.sharedHUD.contentView = PKHUDProgressView();
         PKHUD.sharedHUD.show();
         
-        LFNetwork.login(account: accountField.text!, paswd: pswdField.text!, fn: { user in
-            if let _ = user {
-                LFUtils.userInfo = user;
-                LFUtils.saveUser();
-                PKHUD.sharedHUD.hide() { (res) in
-                    HUD.flash(.success, onView: self.view, delay: 2.0, completion: { (res) in
-                        let storyboard = UIStoryboard.storybord(storybord: .loginASign);
-                        let mainTableVC: UITabBarController = storyboard.instantiateViewController();
-                        UIApplication.shared.keyWindow?.rootViewController = mainTableVC;
-                    })
-                }
-            } else {
-                PKHUD.sharedHUD.hide() { (res) in
+        LFNetwork.shared.login(account: accountField.text!, paswd: pswdField.text!, fn: { user in
+            
+            PKHUD.sharedHUD.hide() { (res) in
+                
+                if let _ = user {
+                    LFUtils.userInfo = user;
+                    LFUtils.saveUser();
+                    
+                    let storyboard = UIStoryboard.storybord(storybord: .loginASign);
+                    let mainTableVC: UITabBarController = storyboard.instantiateViewController();
+                    UIApplication.shared.keyWindow?.rootViewController = mainTableVC;
+                } else {
                     HUD.flash(.error);
                 }
             }

@@ -39,7 +39,7 @@ class LFHistoryViewController: UIViewController {
         PKHUD.sharedHUD.contentView = PKHUDProgressView();
         PKHUD.sharedHUD.show();
         
-        LFNetwork.getHistoryEvents { (events) in
+        LFNetwork.shared.getHistoryEvents { (events) in
             
             PKHUD.sharedHUD.hide();
             
@@ -66,6 +66,7 @@ extension LFHistoryViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseID) as! LFSignCell;
         let event = self.events[indexPath.row];
         cell.event = event;
+        cell.selectionStyle = .none;
         if event.actionType == 2 {
             cell.arrowImageView.isHidden = false;
         } else {
