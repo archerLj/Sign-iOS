@@ -39,6 +39,12 @@
 		418296911EEE6EA5000546C2 /* LFOutCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418296901EEE6EA5000546C2 /* LFOutCommentViewController.swift */; };
 		418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */; };
 		418D99E71EE7DF2000801D25 /* LFRegisterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */; };
+		4193F6151EEF7D7E003217D2 /* LFProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193F6141EEF7D7E003217D2 /* LFProfileHeaderView.swift */; };
+		4193F6171EEF7D8D003217D2 /* LFProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4193F6161EEF7D8D003217D2 /* LFProfileHeaderView.xib */; };
+		4193F6191EEF7DB5003217D2 /* LFProfileFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193F6181EEF7DB5003217D2 /* LFProfileFooterView.swift */; };
+		4193F61B1EEF7DC3003217D2 /* LFProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4193F61A1EEF7DC3003217D2 /* LFProfileFooterView.xib */; };
+		4193F61E1EEF7ED9003217D2 /* LFProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193F61C1EEF7ED9003217D2 /* LFProfileCell.swift */; };
+		4193F61F1EEF7ED9003217D2 /* LFProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4193F61D1EEF7ED9003217D2 /* LFProfileCell.xib */; };
 		41FA9A091EEA9689002DFA61 /* LFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A081EEA9689002DFA61 /* LFUtils.swift */; };
 		41FA9A0B1EEAAE7F002DFA61 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A0A1EEAAE7F002DFA61 /* UITextFieldExt.swift */; };
 		41FA9A0D1EEAB91A002DFA61 /* DispatchQueueExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA9A0C1EEAB91A002DFA61 /* DispatchQueueExt.swift */; };
@@ -82,6 +88,12 @@
 		418296901EEE6EA5000546C2 /* LFOutCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFOutCommentViewController.swift; sourceTree = "<group>"; };
 		418D99E41EE7DF2000801D25 /* LFRegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFRegisterTableViewCell.swift; sourceTree = "<group>"; };
 		418D99E51EE7DF2000801D25 /* LFRegisterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFRegisterTableViewCell.xib; sourceTree = "<group>"; };
+		4193F6141EEF7D7E003217D2 /* LFProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFProfileHeaderView.swift; sourceTree = "<group>"; };
+		4193F6161EEF7D8D003217D2 /* LFProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFProfileHeaderView.xib; sourceTree = "<group>"; };
+		4193F6181EEF7DB5003217D2 /* LFProfileFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFProfileFooterView.swift; sourceTree = "<group>"; };
+		4193F61A1EEF7DC3003217D2 /* LFProfileFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFProfileFooterView.xib; sourceTree = "<group>"; };
+		4193F61C1EEF7ED9003217D2 /* LFProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFProfileCell.swift; sourceTree = "<group>"; };
+		4193F61D1EEF7ED9003217D2 /* LFProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFProfileCell.xib; sourceTree = "<group>"; };
 		41FA9A081EEA9689002DFA61 /* LFUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFUtils.swift; sourceTree = "<group>"; };
 		41FA9A0A1EEAAE7F002DFA61 /* UITextFieldExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		41FA9A0C1EEAB91A002DFA61 /* DispatchQueueExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueExt.swift; sourceTree = "<group>"; };
@@ -262,6 +274,12 @@
 			isa = PBXGroup;
 			children = (
 				418296651EECD87D000546C2 /* Profile.storyboard */,
+				4193F6141EEF7D7E003217D2 /* LFProfileHeaderView.swift */,
+				4193F6161EEF7D8D003217D2 /* LFProfileHeaderView.xib */,
+				4193F6181EEF7DB5003217D2 /* LFProfileFooterView.swift */,
+				4193F61A1EEF7DC3003217D2 /* LFProfileFooterView.xib */,
+				4193F61C1EEF7ED9003217D2 /* LFProfileCell.swift */,
+				4193F61D1EEF7ED9003217D2 /* LFProfileCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -416,11 +434,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4182967E1EED15E8000546C2 /* LFSignFooterView.xib in Resources */,
+				4193F6171EEF7D8D003217D2 /* LFProfileHeaderView.xib in Resources */,
 				4182967A1EED15B5000546C2 /* LFSignHeaderView.xib in Resources */,
 				418296821EED1843000546C2 /* LFSignCell.xib in Resources */,
 				417735111EE64DC300AF7DA2 /* keystore.p12 in Resources */,
+				4193F61B1EEF7DC3003217D2 /* LFProfileFooterView.xib in Resources */,
 				417734EC1EE5409600AF7DA2 /* start-image.png in Resources */,
 				418296661EECD87D000546C2 /* Profile.storyboard in Resources */,
+				4193F61F1EEF7ED9003217D2 /* LFProfileCell.xib in Resources */,
 				417734E21EE5336F00AF7DA2 /* LaunchScreen.storyboard in Resources */,
 				417734DF1EE5336F00AF7DA2 /* Assets.xcassets in Resources */,
 				418D99E71EE7DF2000801D25 /* LFRegisterTableViewCell.xib in Resources */,
@@ -489,6 +510,7 @@
 				417735061EE5469E00AF7DA2 /* StoryboardIdentifiable.swift in Sources */,
 				4182967C1EED15DE000546C2 /* LFSignFooterView.swift in Sources */,
 				418296681EECD889000546C2 /* LFProfileViewController.swift in Sources */,
+				4193F61E1EEF7ED9003217D2 /* LFProfileCell.swift in Sources */,
 				417735041EE5453E00AF7DA2 /* StoryboardExt.swift in Sources */,
 				418D99E61EE7DF2000801D25 /* LFRegisterTableViewCell.swift in Sources */,
 				417735131EE681A100AF7DA2 /* LFDepartment.swift in Sources */,
@@ -498,7 +520,9 @@
 				417735081EE546C600AF7DA2 /* StoryboardIdentifiableExt.swift in Sources */,
 				417735151EE68EF700AF7DA2 /* LFRegisterViewController.swift in Sources */,
 				4177350D1EE63E1000AF7DA2 /* LFNetwork.swift in Sources */,
+				4193F6191EEF7DB5003217D2 /* LFProfileFooterView.swift in Sources */,
 				418296871EEE2577000546C2 /* LFOutViewController.swift in Sources */,
+				4193F6151EEF7D7E003217D2 /* LFProfileHeaderView.swift in Sources */,
 				418296641EECD84A000546C2 /* LFRootPageViewController.swift in Sources */,
 				418296811EED1843000546C2 /* LFSignCell.swift in Sources */,
 				417734D81EE5336F00AF7DA2 /* AppDelegate.swift in Sources */,

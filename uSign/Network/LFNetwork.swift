@@ -171,8 +171,6 @@ class LFNetwork {
         
         Alamofire.request(baseUrl + url, method: method, parameters: params, encoding: URLEncoding.default).responseJSON { (res) in
             
-            print(res);
-            
             switch res.result {
             case .success:
                 if let tempData = res.data {
